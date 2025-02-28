@@ -1,0 +1,74 @@
+.Selector {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 6em;
+    height: 100%;
+
+    background-color: rgba(255, 255, 255, 0.125);
+
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.Selector > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: relative;
+
+    padding: 0.5em;
+    width: 100%;
+    height: fit-content;
+    min-height: 2em;
+
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.125);
+
+    background-color: rgba(255, 255, 255, 0.125);
+
+    cursor: pointer;
+    z-index: 1;
+}
+
+.Selector > div > div {
+    font-size: 14px;
+    text-wrap: wrap;
+}
+
+.Selector > div::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    
+    background-color: rgba(255, 255, 255, 0.125);
+    z-index: -1;
+
+    transition: width 0.25s ease;
+}
+
+.Selector > div:hover::after,
+.Selector > div[active]::after {
+    width: 100%;
+}
+
+.ParticleContainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: calc(100% - 6em);
+    height: calc(100% / 16px);
+
+    overflow: hidden;
+}
+
+.ParticleContainer > div {
+    position: absolute;
+}
