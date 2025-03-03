@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("./format.css");
+
+body {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    margin: 0;
+    overflow: hidden;
+}
+
+* {
+    font-family: "CambriaMath";
+}
+
+div[button] {
+    position: relative;
+
+    background-color: transparent;
+    backdrop-filter: blur(2px);
+
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    font-size: 14px;
+    padding: 2px calc(1em + 8px) 2px calc(1em + 8px);
+
+    cursor: pointer;
+}
+
+div[button]::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+
+    background-color: rgba(255, 255, 255, 0.125);
+
+    transition: all 0.25s ease;
+}
+
+div[button]:hover::after {
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@font-face {
+    font-family: "CambriaMath";
+    src: url("../../fonts/CambriaMath.ttf") format("truetype"),
+}
