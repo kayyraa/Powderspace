@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="scripts/style/format.css">
+        <link rel="stylesheet" href="scripts/style/style.css">
+
+        <script type="module" src="scripts/global.d.js"></script>
+        <script type="module" src="scripts/readonly.js"></script>
+        
+        <script type="module" src="scripts/controls.js"></script>
+        <script type="module" src="scripts/simulation.js"></script>
+        <script type="module" src="scripts/hud.js"></script>
+
+        <title>Powderspace</title>
+    </head>
+    <body>
+        <div class="Selector">
+            <div class="OrderSelector" style="justify-content: center; user-select: none;"><div>[A-Z]</div></div>
+            <div class="NewMaterialButton" style="justify-content: center; user-select: none;"><div>+</div></div>
+        </div>
+        <div class="Topbar">
+            <div style="min-width: 4em; max-width: 4em;" prefix="FPS: " display="Performance.Fps"></div>
+            <div style="min-width: 4em; max-width: 4em;" prefix="Parts: " display="Particle.Count"></div>
+            <div button control="click:Particle.Clear">Clear</div>
+        </div>
+        <div class="ParticleContainer"></div>
+    </body>
+</html>
